@@ -17,7 +17,7 @@ export default function SinglePost() {
     const [updateMode, setUpdateMode] = useState(false);
     useEffect(() => {
         const getPost = async () => {
-            const res = await axios.get("/posts/" + path);
+            const res = await axios.get("https://letusblogg.herokuapp.com/api/posts/" + path);
             setPost(res.data);
             setTitle(res.data.title);
             setDesc(res.data.desc);
