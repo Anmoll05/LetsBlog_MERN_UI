@@ -1,0 +1,57 @@
+.login{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)) , url("https://neilpatel.com/wp-content/uploads/2017/09/5-Common-Blogging-Mistakes-And-How-to-Fix-Them.jpg");
+   background-size: cover;
+}
+.loginTitle{
+    font-size: 60px;
+}
+.loginForm{
+    margin-top: 12px;display: flex;
+    flex-direction: column;
+}
+
+.loginForm > label{
+    margin: 10px 0;
+    font-size: 20px;
+
+}
+.loginForm > input{
+    padding: 15px;
+    font-size: 15px;
+    background-color: #fff;
+    border:none;
+
+}
+.loginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(207, 4, 38, 0.74);
+    border:none;
+    color:white;
+    border-radius: 10px;
+    align-self: center;
+    padding:8px;
+    font-size: 25px;
+    width: 108px;
+}
+.loginRegisterButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(80, 218, 142, 0.74);
+    border:none;
+    color:white;
+    border-radius: 10px;
+    align-self: center;
+    padding:8px;
+    font-size: 25px;
+}
+
+.loginButton:disabled{
+    cursor: not-allowed ;
+    background-color: lightcoral;
+}

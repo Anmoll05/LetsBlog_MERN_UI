@@ -1,0 +1,53 @@
+.register{
+    height: calc(100vh - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)) , url("https://bloggingtips.com/wp-content/uploads/2020/08/Blogging-Tips-Build-Archive-Image.jpg");
+   background-size: cover;
+}
+.registerTitle{
+    font-size: 60px;
+}
+.registerForm{
+    margin-top: 12px;display: flex;
+    flex-direction: column;
+}
+
+.registerForm > label{
+    margin: 10px 0;
+    font-size: 20px;
+
+}
+.registerForm > input{
+    padding: 15px;
+    font-size: 15px;
+    background-color: #fff;
+    border:none;
+
+}
+.registerButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(207, 4, 38, 0.74);
+    border:none;
+    color:white;
+    border-radius: 10px;
+    align-self: center;
+    padding:8px;
+    font-size: 25px;
+   
+}
+.registerLoginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: rgba(80, 218, 142, 0.74);
+    border:none;
+    color:white;
+    border-radius: 10px;
+    align-self: center;
+    width: 108px;
+    padding:8px;
+    font-size: 25px;
+}
