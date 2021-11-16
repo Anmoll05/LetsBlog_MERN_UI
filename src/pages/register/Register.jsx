@@ -12,7 +12,7 @@ export default function Register() {
      setErr(false);
      var res;
      try{
-         res =await axios.post("/auth/register",{
+         res =await axios.post("https://letusblogg.herokuapp.com/api/auth/register",{
             username,
             email,
             password
