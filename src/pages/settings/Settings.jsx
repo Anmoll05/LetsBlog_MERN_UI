@@ -29,14 +29,14 @@ export default function Settings() {
             updatedUser.profilePic=filename;
         
      try{
-        await  axios.post("/upload",data);
+        await  axios.post("https://letusblogg.herokuapp.com/api/upload",data);
      }
      catch(err){
 
      }
     }
     try{
-      const res =  await axios.put("/users/"+user._id,updatedUser);
+      const res =  await axios.put("https://letusblogg.herokuapp.com/api/users/"+user._id,updatedUser);
       dispatch({type:"UPDATE_SUCCESS",payload:res.data});
       alert("Profile has been updated");
       window.location.replace("/");
