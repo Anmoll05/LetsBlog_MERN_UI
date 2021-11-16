@@ -6,7 +6,7 @@ export default function Sidebar() {
     const [cat,setCat]=useState([]);
     useEffect(()=>{
         const getCat = async () => {
-            const res = await axios.get("/categories" );
+            const res = await axios.get("https://letusblogg.herokuapp.com/api/categories" );
             setCat(res.data);
         }
         getCat();
