@@ -22,7 +22,7 @@ export default function Write() {
             newPost.photo=filename;
         
      try{
-        await  axios.post("/upload",data);
+        await  axios.post("https://letusblogg.herokuapp.com/api/posts/upload",data);
      }
      catch(err){
 
