@@ -15,7 +15,7 @@ export default function Login() {
        dispatch({type:"LOGIN_START"});
         var res;
         try{
-            res =await axios.post("/auth/login",{
+            res =await axios.post("https://letusblogg.herokuapp.com/api/auth/login",{
               
                username:userRef.current.value,
                password:passwordRef.current.value
