@@ -11,7 +11,7 @@ export default function Home() {
     const {search} = useLocation();
     useEffect(()=>{
     const fetchPosts=async ()=>{
-     const res = await axios.get("/posts"+search).catch(function (error) {
+     const res = await axios.get("https://letusblogg.herokuapp.com/api/posts"+search).catch(function (error) {
         if (error.response) {
           // Request made and server responded
           console.log(error.response.data);
