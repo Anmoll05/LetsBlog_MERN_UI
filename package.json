@@ -1,6 +1,6 @@
 {
   "name": "blogs",
-  "proxy": "https://letusblogg.herokuapp.com/api/",
+  "proxy": "https://letusblogg.herokuapp.com/api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
