@@ -29,7 +29,7 @@ export default function SinglePost() {
     }
     const handleUpdate=async()=>{
         try{
-            await axios.put(`/posts/${post._id}`,{username:user.username , title,desc});
+            await axios.put(`https://letusblogg.herokuapp.com/api/posts/${post._id}`,{username:user.username , title,desc});
             setUpdateMode(false);
         }
         catch(err){
@@ -39,7 +39,7 @@ export default function SinglePost() {
     }
     const handledelete= async ()=>{
         try{
-            await axios.delete(`/posts/${post._id}`,{data:{username:user.username}});
+            await axios.delete(`https://letusblogg.herokuapp.com/api/posts/${post._id}`,{data:{username:user.username}});
             window.location.replace("/");
         }
         catch(err){
