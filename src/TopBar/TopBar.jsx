@@ -3,13 +3,15 @@ import { Link } from 'react-router-dom';
 import "./topbar.css"
 import { useContext ,useEffect} from "react";
 import { Context } from "../context/Context";
+import { useHistory } from 'react-router-dom';
 export default function TopBar() {
     const {user,dispatch}=useContext(Context);
+    const history = useHistory();
    // const PF="http://localhost:5000/images/";
     const PF="https://letusblogg.herokuapp.com/images/";
     const handlelogout=()=>{
         dispatch({type:"LOGOUT_USER"});
-        window.location.replace("/login");
+       history.push("/login");
     }
     useEffect(() => {
         
