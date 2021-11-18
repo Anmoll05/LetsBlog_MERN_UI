@@ -3,6 +3,7 @@ import Sidebar from "../../sidebar/Sidebar"
 import "./setting.css"
 import {Context} from "../.././context/Context"
 import axios from "axios";
+import { useHistory } from 'react-router-dom';
 
 export default function Settings() {
     const {user , dispatch} = useContext(Context);
@@ -10,6 +11,8 @@ export default function Settings() {
     const [username,setUsername] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
+    const history = useHistory();
+
     //const PF="http://localhost:5000/images/";
     const PF="https://letusblogg.herokuapp.com/images/";
     const handleSubmit = async (e)=>{
@@ -39,7 +42,7 @@ export default function Settings() {
       const res =  await axios.put("https://letusblogg.herokuapp.com/api/users/"+user._id,updatedUser);
       dispatch({type:"UPDATE_SUCCESS",payload:res.data});
       alert("Profile has been updated");
-      window.location.replace("/");
+     history.push("/");
       
     }
     catch(err){
