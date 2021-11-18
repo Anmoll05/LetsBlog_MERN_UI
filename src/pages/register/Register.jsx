@@ -2,11 +2,13 @@ import "./register.css"
 import { Link } from 'react-router-dom';
 import { useState } from "react";
 import axios from "axios";
+import { useHistory } from 'react-router-dom';
 export default function Register() {
     const [username,setUsername] = useState("");
     const [email,setEmail] = useState("");
     const [password,setPassword] = useState("");
     const[err,setErr]=useState(false);
+    const history = useHistory();
     const handleSubmit= async (e)=>{
      e.preventDefault();
      setErr(false);
@@ -17,7 +19,7 @@ export default function Register() {
             email,
             password
         });
-        res.data && window.location.replace("/login");
+        res.data && history.push("/login");
          
      }
      catch(err){
