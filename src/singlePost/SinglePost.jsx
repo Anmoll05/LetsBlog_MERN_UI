@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { Context } from "../context/Context";
+import { useHistory } from 'react-router-dom';
 import "./singlePost.css";
 
 export default function SinglePost() {
@@ -15,6 +16,7 @@ export default function SinglePost() {
     const [title, setTitle] = useState("");
     const [desc, setDesc] = useState("");
     const [updateMode, setUpdateMode] = useState(false);
+    const history = useHistory();
     useEffect(() => {
         const getPost = async () => {
             const res = await axios.get("https://letusblogg.herokuapp.com/api/posts/" + path);
@@ -40,7 +42,7 @@ export default function SinglePost() {
     const handledelete= async ()=>{
         try{
             await axios.delete(`https://letusblogg.herokuapp.com/api/posts/${post._id}`,{data:{username:user.username}});
-            window.location.replace("/");
+            history.push("/");
         }
         catch(err){
 
